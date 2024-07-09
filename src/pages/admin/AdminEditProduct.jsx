@@ -89,9 +89,9 @@ const AdminEditProduct = () => {
                         <label htmlFor="">Select category</label>
                         <select value={productCategory} onChange={(e) => setProductCategory(e.target.value)} className='form-control mb-2'>
                             <option value="Flower">Flower</option>
-                            <option value="Electronics">Electronics</option>
-                            <option value="Gadgets">Gadgets</option>
-                            <option value="Mobile">Mobile</option>
+                            <option value="Herbs">Herbs</option>
+                            <option value="Shrubs">Shrubs</option>
+                            <option value="Trees">Trees</option>
                         </select>
 
                         <label>Product Image</label>

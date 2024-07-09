@@ -84,11 +84,13 @@ const AdminDashboard = () => {
 
     return (
         <>
+        
             <div className='m-4'>
+                
                 <div className='d-flex justify-content-between'>
-                    <h1>Admin Dashboard</h1>
+                    <h1>Admin Panel</h1>
 
-                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Add Product
                     </button>
 
@@ -113,9 +115,9 @@ const AdminDashboard = () => {
                                     <label htmlFor="">Select category</label>
                                     <select onChange={(e) => setProductCategory(e.target.value)} className='form-control mb-2'>
                                         <option value="Flower">Flower</option>
-                                        <option value="Electronics">Electronics</option>
-                                        <option value="Gadgets">Gadgets</option>
-                                        <option value="Mobile">Mobile</option>
+                                        <option value="Electronics">Herbs</option>
+                                        <option value="Gadgets">Shrubs</option>
+                                        <option value="Mobile">Trees</option>
                                     </select>
 
                                     <label>Product Image</label>
@@ -152,7 +154,7 @@ const AdminDashboard = () => {
                     <tbody>
                         {
                             products.map((item) => (
-                                <tr>
+                                <tr key={item._id}>
                                     <td>
                                         <img src={item.productImageUrl} height={40} width={40} />
                                     </td>
@@ -167,8 +169,8 @@ const AdminDashboard = () => {
                                         </div>
                                     </td>
                                 </tr>
-                            ))
-                        }
+                            ))}
+                        
                     </tbody>
                 </table>
 
